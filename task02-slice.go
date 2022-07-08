@@ -2,11 +2,12 @@ package homework
 
 func reverse(input []int64) (result []int64) {
 	//Place your code here
-	reversed := make([]int64, len(input))
+	//slice2 := make([]int64, len(input))
+	//copy := copy(slice2, input)
+	reversed := make([]int64, 0)
+
 	for i := len(input) - 1; i >= 0; i-- {
-		for j := 0; j < len(input); j++ {
-			reversed[j] = input[i]
-		}
+		reversed = append(reversed, input[i])
 	}
 	return reversed
 }
